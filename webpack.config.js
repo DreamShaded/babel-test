@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -36,9 +35,6 @@ const config = {
     },
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-  ]
 };
 
 module.exports = config;
