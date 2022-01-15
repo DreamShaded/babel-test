@@ -35,6 +35,20 @@ const config = {
     },
     ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        polyfills: {
+          test: /[\\/]node_modules[\\/](@babel|core-js|regenerator-runtime|wildcard)[\\/]/,
+          name: 'polyfills',
+          chunks: 'initial',
+          priority: 60,
+          enforce: true,
+          reuseExistingChunk: true
+        }
+      }
+    }
+  }
 };
 
 module.exports = config;
